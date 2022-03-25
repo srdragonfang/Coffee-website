@@ -1,0 +1,96 @@
+// * START >>> [HEADER]
+.header {
+  @include flexbox(row, space-between);
+  background: $clr-light;
+  height: $height-header;
+  padding: 0 3rem;
+  box-shadow: $boxShadowBottom;
+  &-logo {
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+  }
+  & .nav {
+    @include flexbox(row, flex-end);
+    &-list {
+      @include flexbox(row, space-around);
+      height: 50px;
+    }
+    &-item {
+      @include flexbox(row, center);
+      height: 100%;
+      padding: 0 1rem;
+      &:hover {
+        background: lightgray;
+        color: $clr-light;
+        cursor: pointer;
+      }
+    }
+    &-buttons {
+      display: none;
+      & .button-open {
+        display: none;
+      }
+      & .button-close {
+        display: none;
+      }
+    }
+  }
+}
+
+// ! [header] >>> responsive
+@media screen and (max-width: $breakpoint-tablet-small) {
+  .header {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: $boxShadowTop;
+    background: $clr-light;
+    z-index: 1001;
+    & .nav {
+      @include flexbox(row, flex-end);
+      &-list {
+        position: fixed;
+        right: 0;
+        bottom: -150%;
+        left: 0;
+        width: 100%;
+        max-height: 50vh;
+        border-radius: 25px 25px 0 0;
+        z-index: -1;
+        padding-top: 3rem;
+        padding-bottom: calc($height-header + 10px);
+        box-shadow: 2px 0 4px $clr-dark;
+        @include gridbox(1rem);
+        grid-template-columns: 40% 40%;
+      }
+      &-item {
+        @include flexbox(row, center);
+        height: max-content;
+        width: 100%;
+        padding: 0.5rem 1rem;
+        margin: 0rem;
+        &:hover {
+          background: $clr-dark;
+          color: $clr-light;
+        }
+      }
+      &-buttons {
+        display: flex;
+        & .button-open {
+          display: flex;
+        }
+        & .button-close {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// * [HEADER] >>> END
+// * START >>> [PAGE]
+section {
+  margin: 3rem 0;
+  @include flexbox(column, none);
+}

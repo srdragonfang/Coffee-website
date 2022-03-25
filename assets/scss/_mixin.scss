@@ -1,0 +1,11 @@
+@mixin flexbox($a, $b) {
+    display: flex;
+    flex-direction: $a;
+    justify-content: $b;
+    align-items: center;
+}
+
+@mixin gridbox($a) {
+    display: grid;
+    gap: $a;
+}

@@ -1,0 +1,45 @@
+// * START >>> [REVIEW]
+.review {
+  width: 100%;
+  &-container {
+    @include flexbox(row, space-around);
+    flex-wrap: wrap;
+    gap: 3rem;
+    & .box {
+      text-align: left;
+      padding: 3rem 2rem;
+      width: 320px;
+      border-radius: 160px 160px 0 0;
+      box-shadow: 2px 2px 4px lightblue, -2px -2px 4px #e4e4e4;
+      @include flexbox(column, none);
+      & img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 3px groove lightblue;
+      }
+      & p {
+        padding: 2rem 0;
+      }
+      & h3 {
+        padding: 1rem 0;
+        font-size: 2rem;
+      }
+      & .stars i {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: $breakpoint-tablet-small) {
+  .review {
+    width: 100%;
+    &-container {
+      @include flexbox(row, space-around);
+      flex-wrap: wrap;
+      gap: 3rem;
+    }
+  }
+}
+// * [REVIEW] >>> END

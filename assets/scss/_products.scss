@@ -1,0 +1,76 @@
+// * START >>> [PRODUCT]
+.products {
+  @include flexbox(column, center);
+  padding: 1rem;
+  margin: 0 1rem;
+  &-data {
+    @include gridbox(3rem);
+    grid-template-columns: 30% 30% 30%;
+  }
+  &-item {
+    width: 320px;
+    margin: 1rem 0.5rem;
+    height: max-content;
+    overflow: hidden;
+    background: transparent;
+    border-radius: 0 50px 0 50px;
+    box-shadow: 2px 2px 4px lightblue, -2px -2px 4px #e4e4e4;
+    &-image {
+      width: 100%;
+      height: 250px;
+      overflow: hidden;
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+    &-content {
+      @include gridbox(none);
+      grid-template-rows: 30px auto;
+      padding: 1rem 2rem 3rem;
+    }
+    &-description {
+      overflow: hidden;
+      position: relative;
+      & .read-more {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        left: 0;
+        padding: 1rem;
+        text-align: center;
+        background: #191919dc;
+        color: $clr-light;
+        transition: 5s ease-in-out;
+        &:hover {
+          text-decoration: underline;
+          font-weight: 500;
+          transform: translateY(-10px);
+          transition: 1s ease-in-out;
+        }
+      }
+      &:hover .read-more {
+        display: block;
+      }
+    }
+    &:hover {
+      transform: scale(1.025);
+      transition: 0.5s ease-in;
+    }
+  }
+}
+@media screen and (max-width: $breakpoint-tablet-small) {
+  .products {
+    &-data {
+      @include flexbox(row, space-around);
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  }
+}
+// * [PRODUCT] >>> END

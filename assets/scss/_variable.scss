@@ -1,0 +1,42 @@
+$clr-dark: #191919;
+$clr-light: #fff;
+$clr-golden: #daa520;
+$boxShadowTop: 2px 0 4px $clr-dark;
+$boxShadowBottom: 2px 2px 4px lightblue;
+// ! [REPONSIVE]
+// * [RESPONSIVE] >>> variable
+$height-header: 50px;
+// * [RESPONSIVE] >>> breakpoint
+$breakpoint-desktop: 1024px;
+$breakpoint-tablet: $breakpoint-tablet-small;
+$breakpoint-tablet-small: 768px;
+// $breakpoint-mobile: 640px;
+
+$font-size-text: 20px;
+$font-size-h1: 2.5rem;
+$font-size-h2: 2rem;
+$font-size-h3: 1.5rem;
+@media screen and (max-width: $breakpoint-tablet-small) {
+  $font-size-text: 16px;
+  $font-size-h1: 1rem;
+  $font-size-h2: 0.7rem;
+  $font-size-h3: 0.5rem;
+}
+
+/* =========================[LINE]========================= */
+
+$line-1px-light: 1px solid $clr-light;
+$line1px: 1px solid $clr-dark;
+
+/* =========================[MEDIA]========================= */
+
+/* =========================[MEDIA.padding+margin]========================= */
+$padding-base: 1rem 3rem;
+$margin-base: 1rem 3rem;
+$box-shadow-out: 0.8rem 0.8rem 1.4rem #c8d0e7, -0.2rem -0.2rem 1.8rem #fff;
+$box-shadow-in: inset 0.2rem 0.2rem 0.5rem #c8d0e7,
+  inset -0.2rem -0.2rem 0.5rem #fff;
+@media screen and (max-width: $breakpoint-tablet-small) {
+  $padding-base: 0.5rem 1rem;
+  $margin-base: 0.5rem 1rem;
+}
