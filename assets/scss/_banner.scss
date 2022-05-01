@@ -2,20 +2,27 @@
 /*=============== HOME ===============*/
 
 .banner {
+  margin: 5rem 1rem;
+  width: calc(100vw - 2rem);
   height: 100vh;
   color: $clr-dark;
   font-size: 2rem;
-  margin: 1rem;
-  border-radius: 50vh 0 50vh 0;
-  box-shadow: 2px 2px 4px lightblue, -2px -2px 4px #e4e4e4;
-  background: url("../image/product/ca-phe-o-tho-nhi-ky-1.jpg") no-repeat;
-  background-size: cover;
-  @include flexbox(column, center);
+  border-radius: 50vh;
+  @include flexbox(row, flex-end);
+  & img {
+    box-shadow: 2px 2px 4px lightblue, -2px -2px 4px #e4e4e4;
+    height: 100%;
+    width: 50%;
+    border-radius: 50vh 0 0 50vh;
+    object-fit: cover;
+  }
   &-content {
-    display: flex;
-    flex-direction: column;
-    color: $clr-light;
-    width: 30%;
+    color: $clr-dark;
+    width: 50%;
+    height: 100%;
+    border-radius: 0 50vh 50vh 0;
+    @include flexbox(column, center);
+    padding: 3rem;
     &-button {
       border: 3px groove $clr-dark;
       padding: 1rem 2rem;
@@ -36,6 +43,12 @@
 }
 @media screen and (max-width: $breakpoint-tablet-small) {
   .banner {
+    margin: 3rem 0;
+    @include flexbox(column-reverse, flex-end);
+    & img {
+      width: 100%;
+      border-radius: 0 0 50vh 50vh;
+    }
     font-size: 1.5rem;
     &-content {
       width: 100%;

@@ -1,96 +1,185 @@
-// * START >>> [HEADER]
-.header {
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $clr-light;
   @include flexbox(row, space-between);
-  background: $clr-light;
-  height: $height-header;
-  padding: 0 3rem;
-  box-shadow: $boxShadowBottom;
-  &-logo {
-    font-weight: 700;
-    letter-spacing: 0.1rem;
-  }
-  & .nav {
-    @include flexbox(row, flex-end);
-    &-list {
-      @include flexbox(row, space-around);
-      height: 50px;
-    }
-    &-item {
-      @include flexbox(row, center);
-      height: 100%;
-      padding: 0 1rem;
-      &:hover {
-        background: lightgray;
-        color: $clr-light;
-        cursor: pointer;
-      }
-    }
-    &-buttons {
-      display: none;
-      & .button-open {
-        display: none;
-      }
-      & .button-close {
-        display: none;
-      }
-    }
-  }
+  padding: 1rem 3rem;
+  height: 60px;
+  box-shadow: var(--box-shadow-out);
+  z-index: 1000;
+}
+header .logo {
+  color: var(--clr-dark);
+  font-size: 2.5rem;
+  font-weight: bolder;
 }
 
-// ! [header] >>> responsive
-@media screen and (max-width: $breakpoint-tablet-small) {
-  .header {
-    position: fixed;
-    bottom: 0;
+header .navbar a {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  color: var(--clr-dark);
+}
+
+header .navbar a.active,
+header .navbar a:hover {
+  background: var(--clr-dark);
+  color: $clr-light;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#menu-bars,
+.header-icons i,
+.header-icons a {
+  cursor: pointer;
+  margin-left: 0.5rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--clr-dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#menu-bars,
+.icons i:hover,
+.icons a:hover {
+  transform: rotate(360deg);
+}
+
+#menu-bars {
+  display: none;
+}
+
+#search-form {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1004;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+#search-form #search-box {
+  width: 50vw;
+  border-bottom: 0.1rem solid #fff;
+  padding: 1rem 0;
+  color: #fff;
+  font-size: 3rem;
+  text-transform: none;
+  background: transparent;
+}
+
+#search-form #search-box::placeholder {
+  color: #eee;
+}
+
+#search-form #search-box::-webkit-search-cancel-button {
+  /* display: none; */
+  -webkit-appearance: none;
+}
+
+#search-form label {
+  color: $clr-light;
+  cursor: pointer;
+  font-size: 3rem;
+}
+
+#search-form #close {
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  color: $clr-light;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+#search-form.active {
+  top: 0;
+}
+@media screen and (max-width: 768px) {
+  header {
+    @include flexbox(row-reverse, none);
+    padding: 1rem 1rem;
+  }
+  header .logo {
+    display: none;
+  }
+  .navbar {
+    position: absolute;
+    top: 60px;
     left: 0;
     right: 0;
-    box-shadow: $boxShadowTop;
     background: $clr-light;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+    padding: 1rem;
     z-index: 1001;
-    & .nav {
-      @include flexbox(row, flex-end);
-      &-list {
-        position: fixed;
-        right: 0;
-        bottom: -150%;
-        left: 0;
-        width: 100%;
-        max-height: 50vh;
-        border-radius: 25px 25px 0 0;
-        z-index: -1;
-        padding-top: 3rem;
-        padding-bottom: calc($height-header + 10px);
-        box-shadow: 2px 0 4px $clr-dark;
-        @include gridbox(1rem);
-        grid-template-columns: 40% 40%;
-      }
-      &-item {
-        @include flexbox(row, center);
-        height: max-content;
-        width: 100%;
-        padding: 0.5rem 1rem;
-        margin: 0rem;
-        &:hover {
-          background: $clr-dark;
-          color: $clr-light;
-        }
-      }
-      &-buttons {
-        display: flex;
-        & .button-open {
-          display: flex;
-        }
-        & .button-close {
-          display: none;
-        }
-      }
-    }
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
-}
+  .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .navbar a {
+    display: block;
+    padding: 1.5rem;
+    margin: 1rem;
+    font-size: 2rem;
+    background: var(--clr-light-sub);
+  }
+  #menu-bars {
+    display: flex;
+  }
 
-// * [HEADER] >>> END
-// * START >>> [PAGE]
-section {
-  margin: 3rem 0;
-  @include flexbox(column, none);
+  #search-form #search-box {
+    width: 50vw;
+    border-bottom: 0.1rem solid #fff;
+    padding: 1rem 0;
+    color: #fff;
+    font-size: 20px !important;
+    text-transform: none;
+    background: transparent;
+  }
+
+  #search-form #search-box::placeholder {
+    color: #eee;
+  }
+
+  #search-form #search-box::-webkit-search-cancel-button {
+    /* display: none; */
+    -webkit-appearance: none;
+  }
+
+  #search-form label {
+    color: $clr-light;
+    cursor: pointer;
+    font-size: 20px !important;
+  }
+
+  #search-form #close {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    color: $clr-light;
+    font-size: 20px !important;
+    cursor: pointer;
+  }
+
+  #search-form.active {
+    top: 0;
+  }
 }

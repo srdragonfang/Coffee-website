@@ -1,239 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <!-- [css] >>> -->
-    <link rel="stylesheet" href="assets/scss/style.css">
+    <link rel="stylesheet" href="assets/scss/style.css" />
     <!-- [icons] >>> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <title>Sokunmaru - The Coffee Shop</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- START >>> HEADER -->
-    <header class="header">
-        <a href="#" class="header-logo">SOKUNMARU</a>
-        <nav class="nav">
-            <div class="nav-menu">
-                <ul class="nav-list" id="nav-popUp">
-                    <li class="nav-item">
-                        <a href="#products">Products</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#reviews">Reviews</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#contacts">Contacts</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="nav-buttons">
-                <div class="nav-button button-close" id="nav-btn-close">
-                    <i class="fa-solid fa-xmark"></i>
-                </div>
-                <div class="nav-button button-open" id="nav-btn-open">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-            </div>
-        </nav>
+    <header>
+      <!-- header > logo -->
+      <a href="#" class="logo">Sokunmaru</a>
+      <!-- header > navbar -->
+      <nav class="navbar">
+        <a class="active" href="#">home</a>
+        <a href="#products">Our Products</a>
+        <a href="#reviews">Customer's Review</a>
+        <a href="#contacts">Contact</a>
+      </nav>
+      <div class="header-icons">
+        <i class="fas fa-search icon" id="search-icon"></i>
+        <i class="fas fa-heart"></i>
+        <i class="fas fa-shopping-cart"></i>
+      </div>
+      <i class="fa-solid fa-bars" id="menu-bars"></i>
+      <form action="" id="search-form">
+        <input type="search" name="" placeholder="search..." id="search-box" />
+        <label for="search-box" class="fas fa-search"></label>
+        <i class="fas fa-times" id="close"></i>
+      </form>
     </header>
     <!-- HEADER >>> END -->
     <main class="page">
-        <div class="page-wrapper">
-            <section class="banner">
-                <div class="banner-content">
-                    <h1>fresh coffee in the morning</h1>
-<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium temporibus molestiae atque velit dolor magni, ex dolorum error eligendi aliquid!</p>
-                    <a href="#" class="banner-content-button">get yours now</a>
+      <div class="page-wrapper">
+        <section class="banner">
+          <img src="./assets/image/product/ca-phe-o-tho-nhi-ky-1.jpg" />
+          <div class="banner-content">
+            <h1>fresh coffee in the morning</h1>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Accusantium temporibus molestiae atque velit dolor magni, ex
+              dolorum error eligendi aliquid!
+            </p>
+            <a href="#" class="banner-content-button">get yours now</a>
+          </div>
+        </section>
+        <section id="products">
+          <h1 class="heading">our <span>products</span></h1>
+          <div class="products">
+            <div class="products-data">
+              <div class="products-item">
+                <div class="products-item-image">
+                  <img src="assets/image/product/americano.jpg" alt="" />
                 </div>
-            </section>
-            <section id="products">
-                <h1 class="heading"> our <span>products</span> </h1>
-                <div class="products">
-                    <div class="products-data">
-                        <div class="products-item">
-                            <div class="products-item-image">
-                                <img src="assets/image/product/americano.jpg" alt="">
-                            </div>
-                            <div class="products-item-content">
-                                <h3 class="products-item-title">Americano</h3>
-                                <div class="products-item-description">
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae dignissimos dolores nesciunt quas, inventore enim ratione explicabo quis impedit ipsa earum, molestiae, repudiandae laboriosam ipsam animi eos commodi aut
-                                        voluptatum optio. Cupiditate quisquam, dolorum architecto maiores quos quam perspiciatis atque?</p>
-                                    <a class="read-more" href="#">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="products-item">
-                            <div class="products-item-image">
-                                <img src="assets/image/product/ca-phe-o-tho-nhi-ky-1.jpg" alt="">
-                            </div>
-                            <div class="products-item-content">
-                                <h3 class="products-item-title">Turkey Coffee</h3>
-                                <div class="products-item-description">
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae dignissimos dolores nesciunt quas, inventore enim ratione explicabo quis impedit ipsa earum, molestiae, repudiandae laboriosam ipsam animi eos commodi aut
-                                        voluptatum optio. Cupiditate quisquam, dolorum architecto maiores quos quam perspiciatis atque?</p>
-                                    <a class="read-more" href="#">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="products-item">
-                            <div class="products-item-image">
-                                <img src="assets/image/product/Cafe_Mocha-ngon.jpg" alt="">
-                            </div>
-                            <div class="products-item-content">
-                                <h3 class="products-item-title">Mocha Coffee</h3>
-                                <div class="products-item-description">
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae dignissimos dolores nesciunt quas, inventore enim ratione explicabo quis impedit ipsa earum, molestiae, repudiandae laboriosam ipsam animi eos commodi aut
-                                        voluptatum optio. Cupiditate quisquam, dolorum architecto maiores quos quam perspiciatis atque?</p>
-                                    <a class="read-more" href="#">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="products-item">
-                            <div class="products-item-image">
-                                <img src="assets/image/product/capheden.jpg" alt="">
-                            </div>
-                            <div class="products-item-content">
-                                <h3 class="products-item-title">Original Coffee</h3>
-                                <div class="products-item-description">
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae dignissimos dolores nesciunt quas, inventore enim ratione explicabo quis impedit ipsa earum, molestiae, repudiandae laboriosam ipsam animi eos commodi aut
-                                        voluptatum optio. Cupiditate quisquam, dolorum architecto maiores quos quam perspiciatis atque?</p>
-                                    <a class="read-more" href="#">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="products-item">
-                            <div class="products-item-image">
-                                <img src="assets/image/product/cappuccino.jpg" alt="">
-                            </div>
-                            <div class="products-item-content">
-                                <h3 class="products-item-title">Capuchino Coffee</h3>
-                                <div class="products-item-description">
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae dignissimos dolores nesciunt quas, inventore enim ratione explicabo quis impedit ipsa earum, molestiae, repudiandae laboriosam ipsam animi eos commodi aut
-                                        voluptatum optio. Cupiditate quisquam, dolorum architecto maiores quos quam perspiciatis atque?</p>
-                                    <a class="read-more" href="#">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="products-item">
-                            <div class="products-item-image">
-                                <img src="assets/image/product/espresso.jpg" alt="">
-                            </div>
-                            <div class="products-item-content">
-                                <h3 class="products-item-title">Espresso</h3>
-                                <div class="products-item-description">
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae dignissimos dolores nesciunt quas, inventore enim ratione explicabo quis impedit ipsa earum, molestiae, repudiandae laboriosam ipsam animi eos commodi aut
-                                        voluptatum optio. Cupiditate quisquam, dolorum architecto maiores quos quam perspiciatis atque?</p>
-                                    <a class="read-more" href="#">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="products-item-content">
+                  <h3 class="products-item-title">Americano</h3>
+                  <div class="products-item-description">
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Quae dignissimos dolores nesciunt quas, inventore enim
+                      ratione explicabo quis impedit ipsa earum, molestiae,
+                      repudiandae laboriosam ipsam animi eos commodi aut
+                      voluptatum optio. Cupiditate quisquam, dolorum architecto
+                      maiores quos quam perspiciatis atque?
+                    </p>
+                    <a class="read-more" href="#">Read more</a>
+                  </div>
                 </div>
-            </section>
-            <section id="reviews">
-                <h1> customer's <span>review</span> </h1>
-                <div class="review-container">
-                    <div class="box">
-                        <img src="assets/image/product/americano.jpg" alt="">
-                        <h3>Mark Johnson</h3>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla sit libero nemo fuga sequi nobis? Necessitatibus aut laborum, nisi quas eaque laudantium consequuntur iste ex aliquam minus vel? Nemo.</p>
-                    </div>
-
-                    <div class="box">
-                        <img src="assets/image/product/ca-phe-o-tho-nhi-ky-1.jpg" alt="">
-                        <h3>Ardenson</h3>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla sit libero nemo fuga sequi nobis? Necessitatibus aut laborum, nisi quas eaque laudantium consequuntur iste ex aliquam minus vel? Nemo.</p>
-                    </div>
-
-                    <div class="box">
-                        <img src="assets/image/product/cappuccino.jpg" alt="">
-                        <h3>Captain</h3>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla sit libero nemo fuga sequi nobis? Necessitatibus aut laborum, nisi quas eaque laudantium consequuntur iste ex aliquam minus vel? Nemo.</p>
-                    </div>
-
+              </div>
+              <div class="products-item">
+                <div class="products-item-image">
+                  <img
+                    src="assets/image/product/ca-phe-o-tho-nhi-ky-1.jpg"
+                    alt=""
+                  />
                 </div>
+                <div class="products-item-content">
+                  <h3 class="products-item-title">Turkey Coffee</h3>
+                  <div class="products-item-description">
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Quae dignissimos dolores nesciunt quas, inventore enim
+                      ratione explicabo quis impedit ipsa earum, molestiae,
+                      repudiandae laboriosam ipsam animi eos commodi aut
+                      voluptatum optio. Cupiditate quisquam, dolorum architecto
+                      maiores quos quam perspiciatis atque?
+                    </p>
+                    <a class="read-more" href="#">Read more</a>
+                  </div>
+                </div>
+              </div>
+              <div class="products-item">
+                <div class="products-item-image">
+                  <img src="assets/image/product/Cafe_Mocha-ngon.jpg" alt="" />
+                </div>
+                <div class="products-item-content">
+                  <h3 class="products-item-title">Mocha Coffee</h3>
+                  <div class="products-item-description">
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Quae dignissimos dolores nesciunt quas, inventore enim
+                      ratione explicabo quis impedit ipsa earum, molestiae,
+                      repudiandae laboriosam ipsam animi eos commodi aut
+                      voluptatum optio. Cupiditate quisquam, dolorum architecto
+                      maiores quos quam perspiciatis atque?
+                    </p>
+                    <a class="read-more" href="#">Read more</a>
+                  </div>
+                </div>
+              </div>
+              <div class="products-item">
+                <div class="products-item-image">
+                  <img src="assets/image/product/capheden.jpg" alt="" />
+                </div>
+                <div class="products-item-content">
+                  <h3 class="products-item-title">Original Coffee</h3>
+                  <div class="products-item-description">
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Quae dignissimos dolores nesciunt quas, inventore enim
+                      ratione explicabo quis impedit ipsa earum, molestiae,
+                      repudiandae laboriosam ipsam animi eos commodi aut
+                      voluptatum optio. Cupiditate quisquam, dolorum architecto
+                      maiores quos quam perspiciatis atque?
+                    </p>
+                    <a class="read-more" href="#">Read more</a>
+                  </div>
+                </div>
+              </div>
+              <div class="products-item">
+                <div class="products-item-image">
+                  <img src="assets/image/product/cappuccino.jpg" alt="" />
+                </div>
+                <div class="products-item-content">
+                  <h3 class="products-item-title">Capuchino Coffee</h3>
+                  <div class="products-item-description">
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Quae dignissimos dolores nesciunt quas, inventore enim
+                      ratione explicabo quis impedit ipsa earum, molestiae,
+                      repudiandae laboriosam ipsam animi eos commodi aut
+                      voluptatum optio. Cupiditate quisquam, dolorum architecto
+                      maiores quos quam perspiciatis atque?
+                    </p>
+                    <a class="read-more" href="#">Read more</a>
+                  </div>
+                </div>
+              </div>
+              <div class="products-item">
+                <div class="products-item-image">
+                  <img src="assets/image/product/espresso.jpg" alt="" />
+                </div>
+                <div class="products-item-content">
+                  <h3 class="products-item-title">Espresso</h3>
+                  <div class="products-item-description">
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Quae dignissimos dolores nesciunt quas, inventore enim
+                      ratione explicabo quis impedit ipsa earum, molestiae,
+                      repudiandae laboriosam ipsam animi eos commodi aut
+                      voluptatum optio. Cupiditate quisquam, dolorum architecto
+                      maiores quos quam perspiciatis atque?
+                    </p>
+                    <a class="read-more" href="#">Read more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="reviews">
+          <h1>customer's <span>review</span></h1>
+          <div class="review-container">
+            <div class="box">
+              <img src="assets/image/product/americano.jpg" alt="" />
+              <h3>Mark Johnson</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+                nulla sit libero nemo fuga sequi nobis? Necessitatibus aut
+                laborum, nisi quas eaque laudantium consequuntur iste ex aliquam
+                minus vel? Nemo.
+              </p>
+            </div>
 
-            </section>
-        </div>
+            <div class="box">
+              <img
+                src="assets/image/product/ca-phe-o-tho-nhi-ky-1.jpg"
+                alt=""
+              />
+              <h3>Ardenson</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+                nulla sit libero nemo fuga sequi nobis? Necessitatibus aut
+                laborum, nisi quas eaque laudantium consequuntur iste ex aliquam
+                minus vel? Nemo.
+              </p>
+            </div>
+
+            <div class="box">
+              <img src="assets/image/product/cappuccino.jpg" alt="" />
+              <h3>Captain</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+                nulla sit libero nemo fuga sequi nobis? Necessitatibus aut
+                laborum, nisi quas eaque laudantium consequuntur iste ex aliquam
+                minus vel? Nemo.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
     <footer class="footer" id="contacts">
-        <div class="socialBar-bg">
-            <div class="socialBar">
-                <h1 class="socialBar-logo">sokunmaru</h1>
-                <div class="socialBar-data">
-                    <div class="socialBar-item">
-                        <a href="https://sokunmaru-website-1203.web.app/">our webite</a>
-                    </div>
-                    <div class="socialBar-item">
-                        <a href="https://www.github.com/srdragonfang">github</a>
-                    </div>
-                    <div class="share">
-                        <div class="socialBar-item">
-                            <a href="#" class="fab fa-twitter"></a>
-                        </div>
-                        <div class="socialBar-item">
-                            <a href="#" class="fab fa-instagram"></a>
-                        </div>
-                        <div class="socialBar-item">
-                            <a href="#" class="fab fa-linkedin"></a>
-                        </div>
-                        <div class="socialBar-item">
-                            <a href="#" class="fab fa-pinterest"></a>
-                        </div>
-                        <div class="socialBar-item">
-                            <a href="#" class="fab fa-facebook-f"></a>
-                        </div>
-                    </div>
-                </div>
+      <div class="socialBar-bg">
+        <div class="socialBar">
+          <h1 class="socialBar-logo">sokunmaru</h1>
+          <div class="socialBar-data">
+            <div class="socialBar-item">
+              <a href="https://sokunmaru-website-1203.web.app/">our webite</a>
             </div>
-            <div class="socialBar-contact">
-                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.439244720388!2d106.6930872141717!3d10.777631362120003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f385570472f%3A0x1787491df0ed8d6a!2zRGluaCDEkOG7mWMgTOG6rXA!5e0!3m2!1svi!2s!4v1647984326112!5m2!1svi!2s"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
-                </iframe>
+            <div class="socialBar-item">
+              <a href="https://www.github.com/srdragonfang">github</a>
+            </div>
+            <div class="share">
+              <div class="socialBar-item">
+                <a href="#" class="fab fa-twitter"></a>
+              </div>
+              <div class="socialBar-item">
+                <a href="#" class="fab fa-instagram"></a>
+              </div>
+              <div class="socialBar-item">
+                <a href="#" class="fab fa-linkedin"></a>
+              </div>
+              <div class="socialBar-item">
+                <a href="#" class="fab fa-pinterest"></a>
+              </div>
+              <div class="socialBar-item">
+                <a href="#" class="fab fa-facebook-f"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="socialBar-contact">
+          <iframe
+            class="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.439244720388!2d106.6930872141717!3d10.777631362120003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f385570472f%3A0x1787491df0ed8d6a!2zRGluaCDEkOG7mWMgTOG6rXA!5e0!3m2!1svi!2s!4v1647984326112!5m2!1svi!2s"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          >
+          </iframe>
 
-                <div class="content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis accusamus delectus suscipit accusantium libero, pariatur, quaerat voluptates quia in numquam dicta incidunt omnis ipsa exercitationem tenetur odit error ullam dolore dignissimos possimus praesentium quisquam, nostrum placeat beatae. Enim modi, eveniet quod, nam eaque amet nobis, magnam dignissimos eius reiciendis dolorem.</p>            
-                </div>
-            </div>
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+              accusamus delectus suscipit accusantium libero, pariatur, quaerat
+              voluptates quia in numquam dicta incidunt omnis ipsa
+              exercitationem tenetur odit error ullam dolore dignissimos
+              possimus praesentium quisquam, nostrum placeat beatae. Enim modi,
+              eveniet quod, nam eaque amet nobis, magnam dignissimos eius
+              reiciendis dolorem.
+            </p>
+          </div>
         </div>
-        <div class="credits">
-            <p>Sokunmaru Group | Copyright &copy; 2022</p>
-            <h4>
-                <code>developed by </code>
-                <strong class="credits-author">S.R Dragonfang</strong>
-            </h4>
-        </div>
+      </div>
+      <div class="credits">
+        <p>Sokunmaru Group | Copyright &copy; 2022</p>
+        <h4>
+          <code>developed by </code>
+          <strong class="credits-author">S.R Dragonfang</strong>
+        </h4>
+      </div>
     </footer>
-</body>
-<script src="assets/js/main.js"></script>
-
+  </body>
+  <script src="assets/js/main.js"></script>
 </html>

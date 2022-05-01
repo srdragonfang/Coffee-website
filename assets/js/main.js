@@ -1,28 +1,24 @@
-const navMenu = document.getElementById("nav-popUp");
-const navOpen = document.getElementById("nav-btn-open");
-const navClose = document.getElementById("nav-btn-close");
-if (navOpen) {
-    navOpen.addEventListener("click", () => {
-        navMenu.style.bottom = "0";
-        navOpen.style.display = "none";
-        navClose.style.display = "flex";
-    });
-}
+// header
+let menu = document.querySelector("#menu-bars");
+let navbar = document.querySelector(".navbar");
 
-if (navClose) {
-    navClose.addEventListener("click", () => {
-        navMenu.style.bottom = "-100%";
-        navOpen.style.display = "flex";
-        navClose.style.display = "none";
-    });
-}
-// ==============================
-const navLink = document.querySelectorAll(".nav-item");
+menu.onclick = () => {
+  menu.classList.toggle("fa-times");
+  navbar.classList.toggle("active");
+};
 
-function linkAction() {
-    const navMenu = document.getElementById("nav-popUP");
-    navMenu.style.bottom = "-100%";
-    navOpen.style.display = "flex";
-    navClose.style.display = "none";
-}
-navLink.forEach((n) => n.addEventListener("click", linkAction));
+window.onscroll = () => {
+  menu.classList.remove("fa-times");
+  navbar.classList.remove("active");
+};
+
+let searchForm = document.querySelector("#search-form");
+let searchIcon = document.querySelector("#search-icon");
+let closeBtn = document.querySelector("#close");
+
+searchIcon.onclick = () => {
+  searchForm.classList.toggle("active");
+};
+closeBtn.onclick = () => {
+  searchForm.classList.remove("active");
+};

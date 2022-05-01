@@ -7,8 +7,8 @@ $boxShadowBottom: 2px 2px 4px lightblue;
 // * [RESPONSIVE] >>> variable
 $height-header: 50px;
 // * [RESPONSIVE] >>> breakpoint
-$breakpoint-desktop: 1024px;
-$breakpoint-tablet: $breakpoint-tablet-small;
+// $breakpoint-desktop: ;
+// $breakpoint-tablet:  ;
 $breakpoint-tablet-small: 768px;
 // $breakpoint-mobile: 640px;
 
@@ -22,12 +22,6 @@ $font-size-h3: 1.5rem;
   $font-size-h2: 0.7rem;
   $font-size-h3: 0.5rem;
 }
-
-/* =========================[LINE]========================= */
-
-$line-1px-light: 1px solid $clr-light;
-$line1px: 1px solid $clr-dark;
-
 /* =========================[MEDIA]========================= */
 
 /* =========================[MEDIA.padding+margin]========================= */
