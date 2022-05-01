@@ -62,7 +62,7 @@
     margin-right: 0.5rem;
   }
 }
-@media screen and (max-width: $breakpoint-tablet-small) {
+@media screen and (max-width: 768px) {
   .socialBar-contact {
     @include flexbox(column, none);
     & .map {
@@ -76,7 +76,7 @@
   }
 }
 
-@media screen and (max-width: $breakpoint-tablet-small) {
+@media screen and (max-width: 768px) {
   .footer {
     @include flexbox(column, none);
     padding-bottom: 3rem;

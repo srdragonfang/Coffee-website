@@ -64,7 +64,7 @@
     }
   }
 }
-@media screen and (max-width: $breakpoint-tablet-small) {
+@media screen and (max-width: 768px) {
   .products {
     &-data {
       @include flexbox(row, space-around);

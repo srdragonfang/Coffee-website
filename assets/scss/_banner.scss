@@ -41,7 +41,7 @@
     }
   }
 }
-@media screen and (max-width: $breakpoint-tablet-small) {
+@media screen and (max-width: 768px) {
   .banner {
     margin: 3rem 0;
     @include flexbox(column-reverse, flex-end);

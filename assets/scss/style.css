@@ -1,36 +1,3 @@
-/* =========================[MEDIA]========================= */
-/* =========================[MEDIA.padding+margin]========================= */
-:root {
-  /* root > color */
-  --clr-light: #fff;
-  --clr-dark: #191919;
-  --clr-special: green;
-  --clr-light-sub: #eee;
-  /* root > font-size */
-  --font-size-text: 16px;
-  /* root > box-shadow */
-  --padding-default: 3rem;
-  --padding-default-side: 0 3rem;
-  --padding-default-top: 3rem;
-  --padding-default-bottom: 3rem;
-  /* root > box-shadow */
-  --box-shadow-out: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
-  /* root > break-point */
-  --media-tablet-large: 1150px;
-  --media-tablet-medium: 991px;
-  --media-tablet-small: 768px;
-}
-
-@media screen and (max-width: var(--media-tablet-medium)) {
-  :root {
-    --font-size-text: 16px;
-    /* root > box-shadow */
-    --padding-default: 1rem 2rem;
-    --padding-default-side: 0 2rem;
-    --padding-default-top: 2rem;
-    --padding-default-bottom: 2rem;
-  }
-}
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -104,12 +71,12 @@ header {
   align-items: center;
   padding: 1rem 3rem;
   height: 60px;
-  box-shadow: var(--box-shadow-out);
+  box-shadow: 0px 0px 10px lightgrey;
   z-index: 1000;
 }
 
 header .logo {
-  color: var(--clr-dark);
+  color: #191919;
   font-size: 2.5rem;
   font-weight: bolder;
 }
@@ -119,12 +86,12 @@ header .navbar a {
   font-size: 1.2rem;
   border-radius: 0.5rem;
   padding: 0.5rem 1.5rem;
-  color: var(--clr-dark);
+  color: #191919;
 }
 
 header .navbar a.active,
 header .navbar a:hover {
-  background: var(--clr-dark);
+  background: #191919;
   color: #fff;
 }
 
@@ -143,7 +110,7 @@ header .navbar a:hover {
   width: 2.5rem;
   text-align: center;
   font-size: 1.2rem;
-  color: var(--clr-dark);
+  color: #191919;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -257,7 +224,6 @@ header .navbar a:hover {
     padding: 1.5rem;
     margin: 1rem;
     font-size: 2rem;
-    background: var(--clr-light-sub);
   }
 
   #menu-bars {
